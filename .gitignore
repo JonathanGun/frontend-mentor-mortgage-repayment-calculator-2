@@ -1,0 +1,9 @@
+node_modules/
+.cache/
+public
+src/gatsby-types.d.ts
+*.sketch
+*.fig
+*.xd
+.DS_Store
+.prettierignore
