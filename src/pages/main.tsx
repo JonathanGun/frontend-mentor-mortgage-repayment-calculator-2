@@ -75,17 +75,22 @@ const MainPage: React.FC<Props> = ({ _amount, _terms, _rate }) => {
   };
 
   return (
-    <Box className="flex min-w-screen min-h-screen bg-secondary-light justify-center items-center">
-      <Box className="flex flex-col md:flex-row items-stretch w-max h-max lg:h-3/4 md:w-[90%] lg:w-3/4 md:rounded-2xl bg-white">
+    <Box className="flex min-w-screen min-h-screen bg-[#E3FCFC] justify-center items-center">
+      <Card className="flex flex-col md:flex-row items-stretch w-max h-max md:h-4/5 md:w-[90%] lg:w-3/4 md:rounded-2xl bg-white">
         <FormControl className="flex justify-center w-full min-h-full py-2 bg-transparent">
           <Stack spacing={3} className="w-full p-6 md:p-8 lg:p-10">
-            <Box>
+            <Box className="flex flex-col sm:flex-row justify-between">
               <Typography variant="h6" className="text-secondary font-bold">
                 Mortgage Calculator
               </Typography>
-              <Link href="/" className="font-normal text-sm text-slate-500">
-                Clear All
-              </Link>
+              <Box className="h-full flex items-center">
+                <Link
+                  href="/"
+                  className="text-center font-normal text-sm text-secondary"
+                >
+                  Clear All
+                </Link>
+              </Box>
             </Box>
             <TextField
               id="mortgage-amount"
@@ -105,7 +110,7 @@ const MainPage: React.FC<Props> = ({ _amount, _terms, _rate }) => {
               value={amount}
               onChange={(event) => setAmount(parseFloat(event.target.value))}
             />
-            <Stack spacing={2} direction={{ xs: "column", md: "row" }}>
+            <Stack spacing={2} direction={{ xs: "column", sm: "row" }}>
               <TextField
                 id="Mortgage Term"
                 label="Mortgage Term"
@@ -262,7 +267,7 @@ const MainPage: React.FC<Props> = ({ _amount, _terms, _rate }) => {
             )}
           </Box>
         </Box>
-      </Box>
+      </Card>
     </Box>
   );
 };
